@@ -1,0 +1,42 @@
+name: Validate SKILL.md
+
+on:
+  push:
+    paths: ["skills/**/SKILL.md"]
+  pull_request:
+    paths: ["skills/**/SKILL.md"]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check SKILL.md frontmatter
+        run: |
+          SKILL="skills/improve-relationships/SKILL.md"
+
+          # Check file exists
+          if [ ! -f "$SKILL" ]; then
+            echo "::error::SKILL.md not found"
+            exit 1
+          fi
+
+          # Extract frontmatter
+          FRONTMATTER=$(sed -n '/^---$/,/^---$/p' "$SKILL")
+
+          # Check required fields
+          for field in name description homepage user-invocable metadata; do
+            if ! echo "$FRONTMATTER" | grep -q "^${field}:"; then
+              echo "::error::Missing required field: $field"
+              exit 1
+            fi
+          done
+
+          # Check description is single-line
+          DESC_LINES=$(echo "$FRONTMATTER" | sed -n '/^description:/,/^[a-z]/p' | wc -l)
+          if [ "$DESC_LINES" -gt 1 ]; then
+            echo "::warning::Description may be multi-line — verify it's a single-line string"
+          fi
+
+          echo "SKILL.md frontmatter validation passed"
