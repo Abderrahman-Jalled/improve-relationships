@@ -98,6 +98,7 @@ Five dimensions (1-5):
 ## Why now
 
 Every recommendation answers:
+
 1. **Why this person?** — What signal?
 2. **Why this moment?** — Why now, not later?
 3. **Why this channel?** — Best way to reach them?
@@ -161,7 +162,7 @@ Ramadan, Eid al-Fitr, Eid al-Adha, Lunar New Year, Diwali, Nowruz, Christmas, Ha
 
 ## Output format
 
-```
+```markdown
 ### [Name]
 - **Stream**: Work / Personal
 - **Signal**: [trigger]

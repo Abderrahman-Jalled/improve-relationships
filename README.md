@@ -53,7 +53,7 @@ openclaw install improve-relationships
 
 Open OpenClaw and type:
 
-```
+```text
 Give me a relationship digest for this week.
 ```
 
@@ -71,7 +71,7 @@ openclaw publish skills/improve-relationships/
 
 The skill follows a simple loop:
 
-**detect → score → rank → draft → approve**
+### detect → score → rank → draft → approve
 
 For each recommendation, it tries to answer:
 
@@ -86,7 +86,7 @@ If it cannot answer those clearly, it downgrades the suggestion or leaves it out
 
 ### Weekly digest
 
-```
+```text
 Give me a relationship digest for this week.
 ```
 
@@ -94,7 +94,7 @@ Returns up to 5 ranked recommendations grouped by Work and Personal. Each includ
 
 ### Birthday and occasion drafting
 
-```
+```text
 Draft birthday messages for this week. James's birthday is March 12.
 ```
 
@@ -102,7 +102,7 @@ Identifies the person, picks the right tone (celebratory for birthdays, ritual f
 
 ### Long silence detection
 
-```
+```text
 Find people I haven't talked to in 90 days.
 ```
 
@@ -110,7 +110,7 @@ Flags contacts you've gone quiet with, ranks them by relationship importance, an
 
 ### Browser tab review
 
-```
+```text
 Review this LinkedIn tab and tell me if there's a reason to reconnect.
 ```
 
@@ -118,7 +118,7 @@ When you share a browser tab — LinkedIn, Instagram, Twitter/X, a company page,
 
 ### Multilingual drafting
 
-```
+```text
 Draft Ramadan check-in messages in Arabic for Amira and Fatima.
 ```
 
@@ -126,7 +126,7 @@ Drafts in whatever language you and the contact actually communicate in. If your
 
 ### Work-only or personal-only
 
-```
+```text
 Prepare a work-only relationship digest.
 ```
 
@@ -219,7 +219,7 @@ The default digest shows 5 recommendations. Say "show me all" or "next" for more
 
 ## Repo structure
 
-```
+```text
 improve-relationships/
 ├── skills/improve-relationships/
 │   ├── SKILL.md                      The skill — agent-facing instructions

@@ -5,6 +5,7 @@
 SKILL.md that teaches OpenClaw relationship intelligence within a single session.
 
 **Ships with:**
+
 - Signal detection across all available context (calendar, email, messaging, shared browser tabs, social profiles, news, user-provided info)
 - Work / personal stream separation
 - 5-dimension scoring model with ranking thresholds (4.2+ / 3.2–4.1 / <3.2)
@@ -20,6 +21,7 @@ SKILL.md that teaches OpenClaw relationship intelligence within a single session
 - Templates and examples
 
 **Limitations:**
+
 - No persistent state across sessions
 - No background scanning
 - User provides context each session

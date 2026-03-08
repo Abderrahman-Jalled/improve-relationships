@@ -15,6 +15,7 @@
 **Prompt**: "Give me a relationship digest for this week."
 
 **Expected**:
+
 - Defaults to this week, both streams, top 5.
 - Scans available context for signals.
 - Outputs top 5 recommendations grouped by Work and Personal.
