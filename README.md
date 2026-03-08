@@ -203,6 +203,8 @@ This skill should feel useful, but conservative.
 
 You can provide contacts in conversation ("James Park's birthday is March 12, he's a close friend") or use the example CSV format in `examples/example_contacts.csv`. The skill picks up whatever context you share.
 
+> **Note:** All names, dates, and details in the example files are entirely fictional and do not represent real individuals.
+
 ### Setting preferred channels
 
 Tell the skill how you reach each person: "I usually text James and email Sarah." It remembers within the session and uses that for channel recommendations.
